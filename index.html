@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gaming World</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <script>
+   document.addEventListener("DOMContentLoaded", () => {
+  const currentPage = window.location.pathname.split("/").pop();
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    link.classList.toggle("active", link.getAttribute("href") === currentPage);
+  });
+});
+
+  
+    function toggleMenu() {
+      const navLinks = document.querySelector(".nav-links");
+      navLinks.classList.toggle("show");
+    }
+  </script>
+  
+  
+</head>
+<body>
+  <header class="navbar-header">
+    <div class="container">
+      <h1 class="logo">Gaming World</h1>
+      <nav class="navbar">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h2>Level Up Your Gaming Experience</h2>
+    <p>The ultimate hub for gamers worldwide.</p>
+    <a href="games.html" class="btn">Explore Games</a>
+  </section>
+
+  <section class="features">
+    <h2>Why Gaming World?</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Thrilling Adventures</h3>
+        <p>Embark on quests filled with excitement.</p>
+      </div>
+      <div class="card">
+        <h3>Multiplayer Action</h3>
+        <p>Team up or compete with global players.</p>
+      </div>
+      <div class="card">
+        <h3>Cutting-edge Graphics</h3>
+        <p>Experience breathtaking visuals and designs.</p>
+      </div>
+      <div class="card">
+        <h3>New Challenges</h3>
+        <p>Enjoy regular updates with fresh content.</p>
+      </div>
+      <div class="card">
+        <h3>Immersive Gameplay</h3>
+        <p>Dive into worlds that feel alive.</p>
+      </div>
+      <div class="card">
+        <h3>Exciting Updates</h3>
+        <p>New adventures every week.</p>
+      </div>
+    </div>
+  </section>
+  <section class="gaming-showcase">
+    <div class="showcase-image">
+      <img src="images/Annotation.jpg" alt="Adventure Gaming Scene">
+    </div>
+    <div class="showcase-text">
+      <h2>Embark on Epic Adventures</h2>
+      <p>
+        Step into a world filled with thrilling adventures! Solve mysteries, overcome challenges, 
+        and explore breathtaking landscapes in games designed to keep you on the edge of your seat. 
+        Every journey is a story waiting to be told.
+      </p>
+    </div>
+  </section>
+  
+  <section class="gaming-showcase">
+    <div class="showcase-text">
+      <h2>Battle in Legendary Arenas</h2>
+      <p>
+        Enter the battlefield with Call of Duty-style combat action! Test your skills against 
+        fierce opponents in high-stakes multiplayer battles. Whether it’s tactical planning or 
+        all-out warfare, the action never stops.
+      </p>
+    </div>
+    <div class="showcase-image">
+      <img src="images/cod.jpg" alt="Action Gaming Scene">
+    </div>
+  </section>
+  
+  <section class="gaming-showcase">
+    <div class="showcase-image">
+      <img src="images/fifa.jpg" alt="Sports Gaming Scene">
+    </div>
+    <div class="showcase-text">
+      <h2>Score Big on the Field</h2>
+      <p>
+        Experience the thrill of soccer with FIFA-inspired gameplay! From strategic plays to 
+        stunning goals, dominate the pitch and lead your team to victory. Feel the adrenaline 
+        of every match as you rise to the top of the leaderboard.
+      </p>
+    </div>
+  </section>
+    <footer>
+    <p>&copy; 2024 Gaming World. All rights reserved.</p>
+  </footer>
+</body>
+</html>

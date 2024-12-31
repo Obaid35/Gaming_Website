@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About - Gaming World</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const currentPage = window.location.pathname.split("/").pop();
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    link.classList.toggle("active", link.getAttribute("href") === currentPage);
+  });
+});
+
+  
+    function toggleMenu() {
+      const navLinks = document.querySelector(".nav-links");
+      navLinks.classList.toggle("show");
+    }
+  </script>
+  <style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+}
+
+main {
+  flex: 1; 
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #343a40;
+  color: white;
+}
+.about-us{
+  height: 58.6vh;
+}
+
+  </style>
+  
+</head>
+
+<body>
+  <header class="navbar-header">
+    <div class="container">
+      <h1 class="logo">Gaming World</h1>
+      <nav class="navbar">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="about-us">
+      <h2>Welcome to Gaming World</h2>
+      <p>
+        We are passionate gamers bringing the best of online entertainment to the world.
+        Join us and immerse yourself in thrilling games and vibrant communities.
+        At Gaming World, we strive to create an inclusive and exciting space for all gamers,
+        where every level-up feels like a step closer to greatness.
+      </p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Gaming World. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>

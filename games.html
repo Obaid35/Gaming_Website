@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Games - Gaming World</title>
+ <link rel="stylesheet" href="./css/style.css">
+ <script>
+  document.addEventListener("DOMContentLoaded", () => {
+  const currentPage = window.location.pathname.split("/").pop();
+  document.querySelectorAll(".nav-links a").forEach(link => {
+    link.classList.toggle("active", link.getAttribute("href") === currentPage);
+  });
+});
+
+
+  function toggleMenu() {
+    const navLinks = document.querySelector(".nav-links");
+    navLinks.classList.toggle("show");
+  }
+</script>
+
+
+</head>
+<body>
+  <header class="navbar-header">
+    <div class="container">
+      <h1 class="logo">Gaming World</h1>
+      <nav class="navbar">
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="games.html">Games</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+    <main>
+      <section class="games-list">
+        <h2>Explore Our Collection</h2>
+        <div class="game-cards">
+          <div class="game-card">
+            <img src="images/game1.jpg" alt="Adventure Quest">
+            <h3>Adventure Quest</h3>
+            <p>Embark on epic adventures in a world full of mystery and wonder.</p>
+          </div>
+          <div class="game-card">
+            <img src="images/game2.webp" alt="Space Invaders">
+            <h3>Space Invaders</h3>
+            <p>Defend the galaxy in this classic arcade-style shooting game.</p>
+          </div>
+          <div class="game-card">
+            <img src="images/middle-earth-shadow-of-mordor.jpg" alt="Middle-Earth: Shadow of Mordor">
+            <h3>Middle-Earth: Shadow of Mordor</h3>
+            <p>Battle against the forces of Sauron in a gripping fantasy adventure.</p>
+          </div>
+          <div class="game-card">
+            <img src="images/spider-man.jpg" alt="Spider-Man: Miles Morales">
+            <h3>Spider-Man: Miles Morales</h3>
+            <p>Swing into action and save New York City as Spider-Man.</p>
+          </div>
+          <div class="game-card">
+            <img src="images/boxing.jpg" alt="Boxing Champion">
+            <h3>Boxing Champion</h3>
+            <p>Step into the ring and fight your way to the championship title.</p>
+          </div>
+          <div class="game-card">
+            <img src="images/racing-game.jpg" alt="Extreme Racing">
+            <h3>Extreme Racing</h3>
+            <p>Feel the adrenaline rush in high-speed racing competitions.</p>
+          </div>
+        </div>
+      </section>
+      
+  </main>
+  <footer>
+    <p>&copy; 2024 Gaming World. All rights reserved.</p>
+  </footer>
+</body>
+</html>
